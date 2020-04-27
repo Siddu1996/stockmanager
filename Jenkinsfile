@@ -47,20 +47,17 @@ pipeline {
                 sh './jenkins/push/push.sh'
             }
             
-            post {
-                cleanup {
-            /* clean up our workspace */
-                  deleteDir()
-            /* clean up tmp directory */
-                 dir("${workspace}@tmp") {
-                 deleteDir()
-            }
-        
         }
         
-     }
-            
-    }
+        stage ('cleanup') 
+     {
+           cleanWs()         
+           withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
+           dir('/var/lib/jenkins/workspace') {
+           sh "rm -rf stock-maven-app@tmp"
+  }
+  }
+}
 }
     
 }
