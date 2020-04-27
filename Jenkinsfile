@@ -47,6 +47,12 @@ pipeline {
                 sh './jenkins/push/push.sh'
             }
         }
+        stage('CleanWorkspace') {
+           steps {
+                cleanWs()
+            }
+        }
+    
     }
 }
 
