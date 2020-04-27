@@ -49,15 +49,11 @@ pipeline {
             
         }
         
-        stage ('cleanup') 
-     {
-           cleanWs()         
-           withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
-           dir('/var/lib/jenkins/workspace') {
-           sh "rm -rf stock-maven-app@tmp"
-  }
-  }
-}
+        stage('CleanWorkspace') {
+            steps {
+                cleanWs()
+            }
+        }
 }
     
 }
