@@ -46,12 +46,18 @@ pipeline {
             steps {
                 sh './jenkins/push/push.sh'
             }
-        }
-        stage('CleanWorkspace') {
-           steps {
-                cleanWs()
+            
+            post {
+                cleanup {
+            /* clean up our workspace */
+                  deleteDir()
+            /* clean up tmp directory */
+                 dir("${workspace}@tmp") {
+                 deleteDir()
             }
+        
         }
+        
     
     }
 }
