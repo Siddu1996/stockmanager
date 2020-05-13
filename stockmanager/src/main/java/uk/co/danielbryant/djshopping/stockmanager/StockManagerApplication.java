@@ -8,6 +8,6 @@ public class StockManagerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(StockManagerApplication.class, args);
-        System.out.println("hello this is git2");
+        System.out.println("hello this is git3");
     }
 }
