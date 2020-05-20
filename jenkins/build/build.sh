@@ -4,7 +4,7 @@
 
 cp -f stockmanager/target/*.jar jenkins/build/
 
-echo "****************************"
+echo "*************************** *****"
 
 echo " BUILDING DOCKER IMAGE "
 
