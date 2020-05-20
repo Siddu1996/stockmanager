@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "***************************"
-echo "****PUSHING IMAGE**********"
+echo "****PUSHING IMAGE**    ********"
 
 IMAGE="jenkins_demo_project"
 
