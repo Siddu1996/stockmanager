@@ -1,3 +1,3 @@
 # stockmanager
-Hello jenkins3
+Hello github
 
