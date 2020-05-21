@@ -1,6 +1,6 @@
 pipeline {
 
-    agent any
+    agent any1
 
     environment {
         PASS = credentials('registry-pass')
