@@ -1,3 +1,3 @@
 # stockmanager
-Hello github2
+Hello github
 
